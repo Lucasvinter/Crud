@@ -50,7 +50,7 @@ class FuncionarioDao(Conexao):
             lista.append(people)
         return lista
 
-
+    #--- Método para alterar um funcionario passando o id
     def editar_func(self, id):
         lista = []    
         self.cursor.execute("SELECT * FROM funcionarios WHERE id = {}".format(id))

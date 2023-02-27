@@ -50,7 +50,7 @@ class EquipesDao(Conexao):
             equip = {'id': linha[0], 'nome': linha[1], 'linguagem': linha[2], 'projeto': linha[3], 'lider': linha[4], 'integrante1': linha[5], 'integrante2': linha[6], 'integrante3': linha[7], 'integrante4': linha[8]}
             lista.append(equip)
         return lista
-
+    #--- Método para alterar uma equipe passando o id 
     def editar_equipe(self, id):
         lista = []
         self.cursor.execute("SELECT * FROM equipes WHERE id = {}".format(id))
